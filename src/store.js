@@ -47,5 +47,7 @@ export default new Vuex.Store({
   },
   getters: {
     players: state => state.players,
+    totalPlayers: state => state.players.length,
+    totalPoints: state => state.players.reduce((total, player) => total + player.points, 0),
   },
 });

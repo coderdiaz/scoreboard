@@ -3,18 +3,26 @@
     <tbody>
       <tr>
         <td class="row-label">Players:</td>
-        <td>2</td>
+        <td>{{ totalPlayers }}</td>
       </tr>
       <tr>
         <td class="row-label">Total Points:</td>
-        <td>0</td>
+        <td>{{ totalPoints }}</td>
       </tr>
     </tbody>
   </table>
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
+
 export default {
   name: 'Statistics',
+  computed: {
+    ...mapGetters([
+      'totalPlayers',
+      'totalPoints',
+    ]),
+  },
 };
 </script>
