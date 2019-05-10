@@ -7,11 +7,11 @@
     </div>
     <div class="player-controls grid">
       <div class="decrement">
-        <button class="btn" @click.prevent="decrement">-</button>
+        <button class="btn" @click.prevent="decrement" :disabled="!isRunning">-</button>
       </div>
       <span class="score">{{ score }}</span>
       <div class="increment">
-        <button class="btn" @click.prevent="increment">+</button>
+        <button class="btn" @click.prevent="increment" :disabled="!isRunning">+</button>
       </div>
     </div>
   </div>
@@ -48,6 +48,7 @@ export default {
   computed: {
     ...mapGetters([
       'highestScore',
+      'isRunning',
     ]),
     isHighest() {
       return this.highestScore === this.score;

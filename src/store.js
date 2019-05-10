@@ -27,6 +27,9 @@ export default new Vuex.Store({
     REMOVE_POINT: ({ commit }, { playerIndex }) => {
       commit('DECREMENT', playerIndex);
     },
+    STATUS_GAME: ({ commit }, status) => {
+      commit('STATUS_GAME', status);
+    },
   },
   mutations: {
     SET_PLAYER: (state, { name }) => {
@@ -44,6 +47,9 @@ export default new Vuex.Store({
         state.players[index].points -= 1;
       }
     },
+    STATUS_GAME: (state, status) => {
+      state.isRunning = status;
+    },
   },
   getters: {
     players: state => state.players,
@@ -57,5 +63,6 @@ export default new Vuex.Store({
       }
       return null;
     },
+    isRunning: state => state.isRunning,
   },
 });
