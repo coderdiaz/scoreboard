@@ -1,0 +1,36 @@
+// Stopwatch
+.stopwatch {
+  padding: 10px;
+  text-align: center;
+  background-color: darken($primary-color, 15%);
+
+  .title {
+    font-size: 10px;
+    text-transform: uppercase;
+  }
+
+  .stopwatch-time {
+    font-weight: 700;
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  .stopwatch-controls {
+    display: flex;
+    justify-content: space-between;
+
+    .btn {
+      border: 0;
+      width: 100%;
+      border-radius: 3px;
+      background-color: darken($primary-color, 30%);
+      padding: 5px;
+      font-size: 9px;
+      text-transform: uppercase;
+      color: $white-color;
+      &.handler {
+        margin-right: 5px;
+      }
+    }
+  }
+}

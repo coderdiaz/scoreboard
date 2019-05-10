@@ -19,7 +19,7 @@ export default {
   },
   methods: {
     handleSubmit() {
-      if (this.playerName != '') {
+      if (this.playerName !== '') {
         this.$store.dispatch('ADD_PLAYER', { name: this.playerName });
         this.playerName = '';
       }

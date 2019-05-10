@@ -1,5 +1,9 @@
 <template>
   <div class="scoreboard">
+    <div class="scoreboard-header grid">
+      <Statistics />
+      <Stopwatch />
+    </div>
     <div class="scoreboard-content">
       <Player
         v-for="(player, index) in players"
@@ -17,6 +21,8 @@
 import { mapGetters } from 'vuex';
 import PlayerForm from '@/components/PlayerForm.vue';
 import Player from '@/components/Player.vue';
+import Statistics from '@/components/Statistics.vue';
+import Stopwatch from '@/components/Stopwatch.vue';
 
 export default {
   name: 'Scoreboard',
@@ -28,6 +34,8 @@ export default {
   components: {
     PlayerForm,
     Player,
+    Statistics,
+    Stopwatch,
   },
 };
 </script>

@@ -1,0 +1,14 @@
+// Statistics
+.statistics {
+  width: 150px;
+  justify-items: center;
+  padding: 10px;
+  font-size: 14px;
+
+  .row-label {
+    text-align: right;
+    text-transform: uppercase;
+    padding-right: 5px;
+    font-weight: 700;
+  }
+}
