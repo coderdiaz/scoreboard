@@ -1,7 +1,7 @@
 # Scoreboard :sparkles:
 ### A board for publicly displaying the score in a game
 
-This project is based on Treehouse's course for create application with React. But I love Vue for this reason I builded the same challenge using Vue and Vuex.
+This project is based on [Treehouse](https://teamtreehouse.com/)'s course for create applications with React. But I love Vue, for this reason I builded the same challenge using Vue and Vuex.
 
 If you have a recommendation for this application. Submit an a [issue](https://github.com/coderdiaz/scoreboard/issues/new).
 
