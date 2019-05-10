@@ -1,0 +1,35 @@
+// Player
+.player {
+  padding: 15px 10px;
+  grid-template-columns: 25px 1fr 125px;
+  border-bottom: 1px solid;
+  border-color: darken($gray-color, 3%);
+  align-items: center;
+  &:last-child {
+    border: 0;
+  }
+
+  .player-name {
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  .player-controls {
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+
+    .score {
+      text-align: center;
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .btn {
+      border: 0;
+      font-size: 16px;
+      padding: 10px 15px;
+      background-color: $gray-color;
+      cursor: pointer;
+    }
+  }
+}

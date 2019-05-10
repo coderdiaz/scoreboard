@@ -1,11 +1,18 @@
 <template>
-  <div id="app"></div>
+  <div id="app">
+    <Scoreboard />
+  </div>
 </template>
 
 <script>
+import Scoreboard from '@/components/Scoreboard.vue';
+
 export default {
   name: 'app',
+  components: {
+    Scoreboard,
+  },
 };
 </script>
 
-<style lang="scss"></style>
+<style lang="scss" src="./scss/main.scss"></style>
