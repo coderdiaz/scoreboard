@@ -10,8 +10,20 @@
   }
 
   .player-name {
+    display: flex;
     text-transform: uppercase;
     font-weight: 700;
+    align-items: center;
+
+    svg {
+      width: 15px;
+      height: 15px;
+      margin-right: 10px;
+      fill: darken($gray-color, 35%);
+      &.is-high-score {
+        fill: $yellow-color;
+      }
+    }
   }
 
   .player-controls {

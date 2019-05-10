@@ -1,7 +1,10 @@
 <template>
   <div class="player grid">
     <div class="player-remove"></div>
-    <div class="player-name">{{ name }}</div>
+    <div class="player-name">
+      <HighScoreIcon :highest="isHighest"  />
+      {{ name }}
+    </div>
     <div class="player-controls grid">
       <div class="decrement">
         <button class="btn" @click.prevent="decrement">-</button>
@@ -15,6 +18,9 @@
 </template>
 
 <script>
+import HighScoreIcon from '@/components/HighScoreIcon.vue';
+import { mapGetters } from 'vuex';
+
 export default {
   name: 'Player',
   props: {
@@ -38,6 +44,17 @@ export default {
     decrement() {
       this.$store.dispatch('REMOVE_POINT', { playerIndex: this.index });
     },
+  },
+  computed: {
+    ...mapGetters([
+      'highestScore',
+    ]),
+    isHighest() {
+      return this.highestScore === this.score;
+    },
+  },
+  components: {
+    HighScoreIcon,
   },
 };
 </script>

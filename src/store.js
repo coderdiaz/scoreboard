@@ -49,5 +49,13 @@ export default new Vuex.Store({
     players: state => state.players,
     totalPlayers: state => state.players.length,
     totalPoints: state => state.players.reduce((total, player) => total + player.points, 0),
+    highestScore: (state) => {
+      const scores = state.players.map(p => p.points);
+      const highestScore = Math.max(...scores);
+      if (highestScore) {
+        return highestScore;
+      }
+      return null;
+    },
   },
 });
