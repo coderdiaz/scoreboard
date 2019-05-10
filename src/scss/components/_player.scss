@@ -21,6 +21,7 @@
       margin-right: 10px;
       fill: darken($gray-color, 35%);
       &.is-high-score {
+        animation: beat .6s ease-in;
         fill: $yellow-color;
       }
     }
@@ -39,9 +40,22 @@
     .btn {
       border: 0;
       font-size: 16px;
-      padding: 10px 15px;
-      background-color: $gray-color;
+      padding: 10px 14px;
+      background-color: $primary-color;
       cursor: pointer;
+      color: $white-color;
+      border-radius: 3px;
+      &:disabled,
+      [disabled] {
+        color: darken($gray-color, 15%);
+        background-color: darken($gray-color, 5%);
+        &:hover {
+          background-color: darken($gray-color, 5%);
+        }
+      }
+      &:hover {
+        background-color: darken($primary-color, 5%);
+      }
     }
   }
 }

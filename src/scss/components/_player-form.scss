@@ -9,6 +9,7 @@
     padding: 10px;
     border-radius: 3px;
     margin-right: 10px;
+    text-transform: uppercase;
   }
 
   .submit-button {
@@ -20,5 +21,6 @@
     text-transform: uppercase;
     background-color: darken($primary-color, 15%);
     color: $white-color;
+    cursor: pointer;
   }
 }
