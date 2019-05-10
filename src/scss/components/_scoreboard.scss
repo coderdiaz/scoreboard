@@ -2,21 +2,40 @@
 .scoreboard {
   width: 600px;
   min-height: 250px;
-  background: $white-color;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
+  .scoreboard-title {
+    font-size: 35px;
+    text-align: center;
+    color: darken($primary-color, 15%);
+  }
+  
+  .scoreboard-subtitle {
+    text-align: center;
+    font-size: 18px;
+    padding-bottom: 25px;
+    color: darken($primary-color, 50%);
+  }
 
   .scoreboard-header {
     color: $white-color;
     background-color: $primary-color;
     grid-template-columns: 1fr 145px;
     align-items: center;
+    border-top-left-radius: 5px;
+  }
+
+  .scoreboard-content {
+    background-color: $white-color;
   }
 
   .scoreboard-footer {
     background-color: $primary-color;
     padding: 10px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
   }
 }

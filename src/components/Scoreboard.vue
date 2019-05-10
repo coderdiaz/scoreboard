@@ -1,19 +1,23 @@
 <template>
   <div class="scoreboard">
-    <div class="scoreboard-header grid">
-      <Statistics />
-      <Stopwatch />
-    </div>
-    <div class="scoreboard-content">
-      <Player
-        v-for="(player, index) in players"
-        :name="player.name"
-        :score="player.points"
-        :index="index"
-        :key="index" />
-    </div>
-    <div class="scoreboard-footer">
-      <PlayerForm />
+    <h1 class="scoreboard-title">Scoreboard</h1>
+    <h2 class="scoreboard-subtitle">A board for publicly displaying the score in a game</h2>
+    <div class="scoreboard-wrapper">
+      <div class="scoreboard-header grid">
+        <Statistics />
+        <Stopwatch />
+      </div>
+      <div class="scoreboard-content">
+        <Player
+          v-for="(player, index) in players"
+          :name="player.name"
+          :score="player.points"
+          :index="index"
+          :key="index" />
+      </div>
+      <div class="scoreboard-footer">
+        <PlayerForm />
+      </div>
     </div>
   </div>
 </template>
