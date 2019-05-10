@@ -32,7 +32,7 @@ export default new Vuex.Store({
     SET_PLAYER: (state, { name }) => {
       const player = {
         name,
-        score: 0,
+        points: 0,
       };
       state.players.push(player);
     },
