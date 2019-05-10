@@ -8,11 +8,11 @@ export default new Vuex.Store({
     isRunning: false,
     players: [
       {
-        name: 'John Doe',
+        name: 'Golda',
         points: 0,
       },
       {
-        name: 'Bruce Wayne',
+        name: 'Goldo',
         points: 0,
       },
     ],
@@ -20,6 +20,12 @@ export default new Vuex.Store({
   actions: {
     ADD_PLAYER: ({ commit }, { name }) => {
       commit('SET_PLAYER', { name });
+    },
+    ADD_POINT: ({ commit }, { playerIndex }) => {
+      commit('INCREMENT', playerIndex);
+    },
+    REMOVE_POINT: ({ commit }, { playerIndex }) => {
+      commit('DECREMENT', playerIndex);
     },
   },
   mutations: {
@@ -29,6 +35,14 @@ export default new Vuex.Store({
         score: 0,
       };
       state.players.push(player);
+    },
+    INCREMENT: (state, index) => {
+      state.players[index].points += 1;
+    },
+    DECREMENT: (state, index) => {
+      if (state.players[index].points > 0) {
+        state.players[index].points -= 1;
+      }
     },
   },
   getters: {

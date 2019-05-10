@@ -8,7 +8,8 @@
       <Player
         v-for="(player, index) in players"
         :name="player.name"
-        :score="player.score"
+        :score="player.points"
+        :index="index"
         :key="index" />
     </div>
     <div class="scoreboard-footer">

@@ -4,11 +4,11 @@
     <div class="player-name">{{ name }}</div>
     <div class="player-controls grid">
       <div class="decrement">
-        <button class="btn">-</button>
+        <button class="btn" @click.prevent="decrement">-</button>
       </div>
       <span class="score">{{ score }}</span>
       <div class="increment">
-        <button class="btn">+</button>
+        <button class="btn" @click.prevent="increment">+</button>
       </div>
     </div>
   </div>
@@ -25,6 +25,18 @@ export default {
     score: {
       type: Number,
       default: 0,
+    },
+    index: {
+      type: Number,
+      required: true,
+    },
+  },
+  methods: {
+    increment() {
+      this.$store.dispatch('ADD_POINT', { playerIndex: this.index });
+    },
+    decrement() {
+      this.$store.dispatch('REMOVE_POINT', { playerIndex: this.index });
     },
   },
 };
